@@ -1,0 +1,110 @@
+:root {
+  --color-a: #ebf8f2;
+  --color-b: #cfefdf;
+  --color-c: #a7e1c4;
+  --color-d: #76d0a3;
+  --color-e: #3dbd7d;
+  --color-f: #00a854;
+  --color-g: #00924c;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+#app {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* 主轴 */
+  justify-content: center;
+  /* gap: 10px; */
+  row-gap: 10px;
+  column-gap: 10px;
+  /* 侧轴 */
+  /* align-content: center; */
+  align-items: center;
+}
+
+#app div {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  /* flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 50px; */
+
+  /* flex: 1 1 50px; */
+
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+#app div.a {
+  background-color: var(--color-a);
+  /* flex-grow: 2;
+  flex-shrink: 2; */
+  order: 1;
+}
+
+#app div.b {
+  background-color: var(--color-b);
+  order: 1;
+}
+
+#app div.c {
+  background-color: var(--color-c);
+}
+
+#app div.d {
+  background-color: var(--color-d);
+}
+
+#app div.e {
+  background-color: var(--color-e);
+  order: -1;
+}
+
+#app div.f {
+  background-color: var(--color-f);
+  align-self: self-start;
+}
+
+#app div.g {
+  background-color: var(--color-g);
+  /* min-width: 50px; */
+  align-self: flex-end;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content,
+.sign {
+  display: flex;
+  gap: 10px;
+}
+
+.content a,
+.sign a{
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: #fff;
+  background-color: var(--color-g);
+}
